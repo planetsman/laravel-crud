@@ -27,3 +27,7 @@ Route::post('create','PostsController@create');
 Route::post('update','PostsController@update');
 
 // Form::input('text', 'newPost', null, ['required', 'class' => 'form-control', 'placeholder' => '投稿内容内容']);
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
