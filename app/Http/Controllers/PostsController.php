@@ -6,7 +6,10 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     //indexメソッドを追加しました
     public function index()
     {
